@@ -7,3 +7,32 @@ mongoose
 app.get('/', (req, res) => {
   res.send('API is running...');
 });
+
+return (
+    <div>
+      <h1>{message}</h1>
+    </div>
+    
+  );
+}
+
+
+      {/* Navbar */}
+      <nav className="navbar">
+        <ul className="navbar-links">
+          <li><Link to="/" className="navbar-link">Home</Link></li>
+          <li><Link to="/worldnews" className="navbar-link">worldnews</Link></li>
+          <li><Link to="/subscribe" className="navbar-link">subscribe</Link></li>
+          <li><Link to="/notfound" className="navbar-link">notfound</Link></li>
+        </ul>
+      </nav>
+
+      {/* Page Content */}
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/worldnews" component={worldnews} />
+        <Route path="/subscribe" component={subscribe} />
+        <Route path="/notfound" component={notfound} />
+      </Switch>
+    </div>
+  </Router>

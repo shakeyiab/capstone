@@ -3,8 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { useEffect } from 'react';
-
+import React from 'react';
 import axios from 'axios';
+import Home from '../components/home';
+import notfound from '../components/Notfound';
+import subscribe from '../components/Subscribe';
+import Worldnews from '../components/Worldnews';
+import { Routes, Route } from 'react-router-dom';
+import Nav from '../components/nav';
+import Subscribe from '../components/Subscribe';
+import Notfound from '../components/Notfound';
+
 
 
 function App() {
@@ -22,10 +31,17 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>{message}</h1>
-    </div>
-  );
+    <main>
+    <Nav />
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/worldnews' element={<Worldnews />} />
+      <Route path='/Subscribe' element={<Subscribe />} />
+      <Route path='/notfound' element={<Notfound />} />
+    </Routes>
+  </main>
+);
 }
+ 
 
 export default App;
