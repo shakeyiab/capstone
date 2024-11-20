@@ -5,7 +5,9 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import bodyParser from "body-parser";
-import itemRoutes from './routes/itemRoutes.mjs'
+import itemRoutes from './routes/itemRoutes.mjs';
+
+
 
 
 
@@ -30,8 +32,7 @@ app.get('/api/message', (req, res) => {
     res.json({ message: 'Hello from Node.js!' });
   });
 
-
-
-
+  
+ 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

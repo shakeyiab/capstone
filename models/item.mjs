@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
 
-const itemSchema = new mongoose.Schema({
+const ItemSchema = new mongoose.Schema({
   name: { type: String, required: true },
-  email: { type: String, required: true },
+  description: { type: String, required: true },
 });
 
+const Item = mongoose.model("Item", ItemSchema);
 
-export default itemSchema;
+
+export default Item;

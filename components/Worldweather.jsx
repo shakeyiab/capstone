@@ -1,6 +1,8 @@
 import React from 'react';
+import axios from "axios";
 
-function Worldweather() {
+
+function Worldnews()  {
   return (
     <div>
       <h1>notfound</h1>
@@ -9,4 +11,5 @@ function Worldweather() {
   );
 }
 
-export default Worldweather;
+export default Worldnews;
+
