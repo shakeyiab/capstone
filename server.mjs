@@ -1,0 +1,31 @@
+
+import express from 'express';
+import connectdb from './config/db.mjs'
+import mongoose from 'mongoose';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import bodyParser from "body-parser";
+import itemRoutes from './routes/itemRoutes.mjs'
+
+connectdb();
+const app = express();
+dotenv.config();
+let PORT = process.env.PORT || 3000;
+
+
+//middleware
+app.use(cors());
+app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ extended: true }));
+app.use('/api/items', itemRoutes);
+
+
+
+app.get('/', (req, res) => res.send('API is running'));
+
+
+
+
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
