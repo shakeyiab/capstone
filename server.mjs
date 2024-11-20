@@ -7,6 +7,8 @@ import dotenv from 'dotenv';
 import bodyParser from "body-parser";
 import itemRoutes from './routes/itemRoutes.mjs'
 
+
+
 connectdb();
 const app = express();
 dotenv.config();
@@ -23,6 +25,10 @@ app.use('/api/items', itemRoutes);
 
 
 app.get('/', (req, res) => res.send('API is running'));
+
+app.get('/api/message', (req, res) => {
+    res.json({ message: 'Hello from Node.js!' });
+  });
 
 
 
