@@ -6,13 +6,13 @@ import { useEffect } from 'react';
 import React from 'react';
 import axios from 'axios';
 import Home from '../components/home';
-import notfound from '../components/Notfound';
+import Worldweather from '../components/Worldweather';
 import subscribe from '../components/Subscribe';
 import Worldnews from '../components/Worldnews';
 import { Routes, Route } from 'react-router-dom';
 import Nav from '../components/nav';
 import Subscribe from '../components/Subscribe';
-import Notfound from '../components/Notfound';
+import Notfound from '../components/Worldweather';
 
 
 
@@ -37,7 +37,7 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/worldnews' element={<Worldnews />} />
       <Route path='/Subscribe' element={<Subscribe />} />
-      <Route path='/notfound' element={<Notfound />} />
+      <Route path='/Worldweather' element={<Worldweather />} />
     </Routes>
   </main>
 );

@@ -1,11 +1,25 @@
 import React from 'react';
 
 function Home() {
+    const styles = {
+        container: {
+          backgroundColor: 'lightblue',
+          padding: '20px',
+          textAlign: 'center',
+        },
+        heading: {
+          color: 'darkblue',
+          fontSize: '24px',
+        }
+       
+      };
+
   return (
-    <div>
-      <h1>Home Page</h1>
-      <p>Welcome to the Home page!</p>
-    </div>
+    <div style={styles.container}>
+    <h1 style={styles.heading}>Be The First To Recieve News!</h1>
+    <p1>Sound journalism, grounded in facts never opinons</p1>
+  </div>
+    
   );
 }
 

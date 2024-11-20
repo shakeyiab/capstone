@@ -5,11 +5,12 @@ export default function Nav() {
     <nav>
       <Link to={'/'}>Home</Link>
       {' | '}
-      <Link to={'/subscribe'}>subscribe</Link>
+      <Link to={'/worldnews'}>World news</Link>
       {' | '}
-      <Link to={'/worldnews'}>worldnews</Link>
+      <Link to={'/notfound'}>World weather</Link>
       {' | '}
-      <Link to={'/notfound'}>notfound</Link>
+      <Link to={'/subscribe'}>Subscribe</Link>
+      {' | '}
     </nav>
   );
 }

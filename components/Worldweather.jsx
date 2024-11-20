@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Notfound() {
+function Worldweather() {
   return (
     <div>
       <h1>notfound</h1>
@@ -9,4 +9,4 @@ function Notfound() {
   );
 }
 
-export default Notfound;
+export default Worldweather;
