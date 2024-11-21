@@ -1,8 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
-// Base URL of the backend
-const API = axios.create({
-  baseURL: 'http://localhost:5000', // Adjust this to your backend URL
-});
+const API_URL = "http://localhost:3000/api/items";
 
-export const fetchMessage = () => API.get('/api/message');
+// Create a new item
+export const createItem = async (item) => {
+  const response = await axios.post(API_URL, item);
+  return response.data;
+};
