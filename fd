@@ -36,3 +36,131 @@ return (
       </Switch>
     </div>
   </Router>
+
+  app.get('/items', async (req, res) => {
+    try {
+      // Fetch all items from the "items" collection
+      const items = await Item.find();  // Mongoose automatically uses the 'items' collection
+      res.status(200).json(items);  // Send the data as a JSON response
+    } catch (err) {
+      res.status(500).json({ message: 'Error fetching items', error: err });
+    }
+  });
+
+  const itemSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    price: { type: Number, required: true },
+  });
+  
+  // Create a model based on the schema
+  const Item = mongoose.model('Item', itemSchema);
+
+
+  / State to store form data
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [price, setPrice] = useState('');
+  const [message, setMessage] = useState('');
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Create item object
+    const newItem = {
+      name,
+      description,
+      price: parseFloat(price),
+    };
+
+    try {
+      // Send POST request to backend to add the item
+      const response = await axios.post('http://localhost:3000/add-item', newItem);
+
+      // Handle successful response
+      setMessage('Item added successfully');
+      console.log(response.data); // You can handle the response as needed
+    } catch (error) {
+      // Handle error response
+      setMessage('Error adding item');
+      console.error(error);
+    }
+
+    <div>
+      <h2>Add Item</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Item Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label>Description:</label>
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          ></textarea>
+        </div>
+        <div>
+          <label>Price:</label>
+          <input
+            type="number"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Add Item</button>
+      </form>
+      {message && <p>{message}</p>}
+    </div>
+
+
+     
+app.get('/comments', async (req, res) => {
+  try {
+    const comments = await Comment.find();
+    res.status(200).json(comments);
+  } catch (err) {
+    res.status(500).json({ message: 'Error fetching comments', error: err.message });
+  }
+});
+
+// UPDATE: Update a comment by ID
+app.put('/comment/:id', async (req, res) => {
+  const { id } = req.params;
+  const { text, author } = req.body;
+
+  try {
+    const updatedComment = await Comment.findByIdAndUpdate(id, { text, author }, { new: true });
+    if (updatedComment) {
+      res.status(200).json({ message: 'Comment updated successfully', comment: updatedComment });
+    } else {
+      res.status(404).json({ message: 'Comment not found' });
+    }
+  } catch (err) {
+    res.status(500).json({ message: 'Error updating comment', error: err.message });
+  }
+});
+
+// DELETE: Delete a comment by ID
+app.delete('/comment/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const deletedComment = await Comment.findByIdAndDelete(id);
+    if (deletedComment) {
+      res.status(200).json({ message: 'Comment deleted successfully' });
+    } else {
+      res.status(404).json({ message: 'Comment not found' });
+    }
+  } catch (err) {
+    res.status(500).json({ message: 'Error deleting comment', error: err.message });
+  }
+});

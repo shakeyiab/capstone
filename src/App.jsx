@@ -7,7 +7,7 @@ import React from 'react';
 import axios from 'axios';
 import Home from '../components/home';
 import Worldweather from '../components/Worldweather';
-import subscribe from '../components/Subscribe';
+
 import Worldnews from '../components/Worldnews';
 import { Routes, Route } from 'react-router-dom';
 import Nav from '../components/nav';
@@ -17,6 +17,9 @@ import Notfound from '../components/Worldweather';
 
 
 function App() {
+ 
+  <Worldnews />
+
   const [message, setMessage] = useState('');
 
   useEffect(() => {
