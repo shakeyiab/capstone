@@ -3,9 +3,13 @@ import express from 'express';
 import connectdb from './config/db.mjs'
 import mongoose from 'mongoose';
 import cors from 'cors';
+
+import userRoutes from './routes/userRoutes.mjs';
 import dotenv from 'dotenv';
 import bodyParser from "body-parser";
-import Item from './models/item.mjs';
+
+
+
 
 
 
@@ -23,8 +27,9 @@ app.use(cors());
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
+app.use('/api', userRoutes);
 
- 
+
 app.get('/', (req, res) => res.send('API is running'));
 
 app.get('/api/message', (req, res) => {
