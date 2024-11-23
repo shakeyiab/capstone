@@ -6,4 +6,4 @@ const userSchema = new mongoose.Schema({
     age: { type: Number, required: true },
   });
   
-  default export userSchema
+  default export userSchema;
