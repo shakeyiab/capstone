@@ -1,5 +1,6 @@
 import React from 'react';
 import { float } from 'webidl-conversions';
+import HomeNews from './homenews';
 
 function Home() {
     const styles = {
@@ -57,7 +58,8 @@ function Home() {
      
     </div>
     <div> <p>Quickly Subscribe To Recieve News For As Low As $3.99 A Month! </p></div>
-  </div>
+
+    <HomeNews />  </div>
     
   );
 }

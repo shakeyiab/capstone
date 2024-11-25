@@ -2,7 +2,6 @@ import express from 'express';
 import connectdb from './config/db.mjs'
 import mongoose from 'mongoose';
 import cors from 'cors';
-
 import userRoutes from './routes/userRoutes.mjs';
 import dotenv from 'dotenv';
 import bodyParser from "body-parser";

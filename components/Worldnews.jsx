@@ -4,6 +4,7 @@ import axios from "axios";
 import CreateItemForm from "./CreateItemFor.jsx";
 import EditItemForm from "./EditItemForm";
 import ItemList from "./itemlist.jsx";
+import NewsComponent from "./new.jsx";
 
 function Worldnews(){
   const [editItemId, setEditItemId] = useState(null);
@@ -31,7 +32,9 @@ function Worldnews(){
   };
 
   return (
+  
     <div className="App">
+    <NewsComponent />
       <h1></h1>
       <CreateItemForm refreshItems={() => setRefresh(!refresh)} />
       {editItemId ? (
