@@ -1,3 +1,4 @@
+// import all files into backend server
 import express from 'express';
 import connectdb from './config/db.mjs'
 import mongoose from 'mongoose';
@@ -5,12 +6,16 @@ import cors from 'cors';
 import userRoutes from './routes/userRoutes.mjs';
 import dotenv from 'dotenv';
 import bodyParser from "body-parser";
+import userSchema from './schema/newSchema.mjs'
 
 
+//connect to mongodb
 connectdb();
 
 const app = express();
+// dot env
 dotenv.config();
+//port
 let PORT = process.env.PORT || 3000;
 
 
@@ -20,11 +25,12 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
 
-
+// array to populate 
 let items = [];
 
+//CRUD i added it to my backend server bc i was having hard time importing i figured out why 
 
-// CREATE - Add new item
+// CREATE
 app.post('/items', (req, res) => {
   const { name, description } = req.body;
 
@@ -41,7 +47,7 @@ app.post('/items', (req, res) => {
   });
 });
 
-// READ - Get all items
+// READ 
 app.get('/items', (req, res) => {
   res.status(200).json({
       message: 'Items fetched successfully!',
@@ -49,7 +55,7 @@ app.get('/items', (req, res) => {
   });
 });
 
-// READ - Get a single item by ID
+
 app.get('/items/:id', (req, res) => {
   const itemId = parseInt(req.params.id);
   const item = items.find(i => i.id === itemId);
@@ -64,7 +70,7 @@ app.get('/items/:id', (req, res) => {
   });
 });
 
-// UPDATE - Update an item by ID
+// UPDATE 
 app.put('/items/:id', (req, res) => {
   const itemId = parseInt(req.params.id);
   const { name, description } = req.body;
@@ -86,8 +92,8 @@ app.put('/items/:id', (req, res) => {
   });
 });
 
-// DELETE - Delete an item by ID
-// DELETE - Delete an item by ID
+// DELETE 
+
 app.delete('/items/:id', (req, res) => {
   const itemId = parseInt(req.params.id);
 
@@ -107,7 +113,7 @@ app.delete('/items/:id', (req, res) => {
 app.get('/', (req, res) => res.send('API is running'));
 
 app.get('/api/message', (req, res) => {
-    res.json({ message: 'Hello from Node.js!' });
+    res.json({ message: 'please work' });
   });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
