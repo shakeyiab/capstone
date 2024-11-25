@@ -92,7 +92,7 @@ app.put('/items/:id', (req, res) => {
   });
 });
 
-// DELETE 
+// DELETE //my delete doent work idk if im not utilizing it correctly
 
 app.delete('/items/:id', (req, res) => {
   const itemId = parseInt(req.params.id);
