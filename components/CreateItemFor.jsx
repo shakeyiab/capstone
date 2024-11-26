@@ -30,7 +30,7 @@ const CreateItemForm = ({ refreshItems }) => {
 
   return (
     <div>
-      <h3>Leave A Comment</h3>
+      <h3>Whats On Your Mind</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
