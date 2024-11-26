@@ -1,3 +1,6 @@
+//home page for my news webpage
+
+
 import React from 'react';
 import { float } from 'webidl-conversions';
 import HomeNews from './homenews';

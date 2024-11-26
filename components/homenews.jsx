@@ -1,3 +1,6 @@
+// api i used to populate the homepage
+
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 

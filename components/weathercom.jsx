@@ -1,3 +1,6 @@
+// weathr component to bring down weather api to populaate webpage with different city weather
+
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
