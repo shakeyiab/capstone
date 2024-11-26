@@ -8,7 +8,7 @@ const WeatherComponent = () => {
     const [selectedCity, setSelectedCity] = useState("San Francisco");
   
     const API_KEY = "3d219120e1d7553eb4217544605d9883";
-  const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
+  const BASE_URL = "https://api.openweathermap.org/data/3.0/onecall";
   
     //city lat and long for location
     const cities = {

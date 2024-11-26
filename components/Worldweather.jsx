@@ -6,8 +6,9 @@ import WeatherComponent from './weathercom';
 function Worldweather(){
   return (
     <div>
-      <WeatherComponent />
       
+      <WeatherComponent />
+     
     </div>
   );
 }
