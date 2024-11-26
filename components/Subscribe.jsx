@@ -52,8 +52,8 @@ function Subscribe()  {
     };
   
     const cards = [
-      { id: 1, title: 'Basic Plan', description: 'This is card 1', image: 'https://th.bing.com/th/id/OIP.AEP7ogG9e4QX5P74fKNHLQAAAA?rs=1&pid=ImgDetMain' },
-      { id: 2, title: 'Plan Plus', description: 'This is card 2', image: 'https://cdn.pixabay.com/photo/2014/04/02/10/55/plus-304947_1280.png' },
+      { id: 1, title: 'Basic Plan', description: '$1/week For A Year', image: 'https://th.bing.com/th/id/OIP.AEP7ogG9e4QX5P74fKNHLQAAAA?rs=1&pid=ImgDetMain' },
+      { id: 2, title: 'Plan Plus', description: '$1.75/week for 1 year', image: 'https://cdn.pixabay.com/photo/2014/04/02/10/55/plus-304947_1280.png' },
      
     ];
   
@@ -68,9 +68,20 @@ function Subscribe()  {
             <p style={descriptionStyle}>{card.description}</p>
             
             <p2><ul><li>
+            Unlimited access to news articles, including audio articles</li>
+              <li>Daily puzzles and crosswords</li>
+              <li>Subscriber only audio and video content</li>
+              </ul></p2>
+
+              {card.id === 2 && (
+            <p style={{  }}>
+              <p2><ul><li>
               hello</li>
               <li></li></ul>niii<br></br></p2>
-            <button style={buttonStyle}>Read More</button>
+              
+            </p>
+          )}
+            <button style={buttonStyle}>Suscribe Now</button>
           </div>
         ))}
       </div>
