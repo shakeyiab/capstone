@@ -59,6 +59,7 @@ function Subscribe()  {
   
     return (
       <div ><h1>Choose Your Subscription</h1>
+      <p1>Dont Forget To Checkout Our Paper Options</p1>
       <div style={containerStyle}>
        
         {cards.map((card) => (

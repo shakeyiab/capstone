@@ -12,7 +12,7 @@ import Worldnews from '../components/Worldnews';
 import { Routes, Route } from 'react-router-dom';
 import Nav from '../components/nav';
 import Subscribe from '../components/Subscribe';
-import Notfound from '../components/Worldweather';
+
 
 
 

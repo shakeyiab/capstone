@@ -34,13 +34,13 @@ const CreateItemForm = ({ refreshItems }) => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Item Name"
+          placeholder="Username"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Add Comment"
+          placeholder="Insert Comment"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />

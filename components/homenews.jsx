@@ -45,7 +45,7 @@ function HomeNews()
                 <img
                   src={article.urlToImage}
                   alt={article.title}
-                  style={{ width: "100%", maxHeight: "200px", objectFit: "cover" }}
+                  style={{ width: "100%", maxHeight: "200px", objectFit: "scale-down", }}
                 />
               )}
               <p>{article.description}</p>

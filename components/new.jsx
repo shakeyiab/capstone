@@ -42,7 +42,7 @@ const NewsComponent = () => {
                   <img
                     src={article.urlToImage}
                     alt={article.title}
-                    style={{ width: "100%", maxHeight: "200px", objectFit: "cover" }}
+                    style={{ width: "100%", maxHeight: "200px", objectFit: "contain",display:"inline-block" }}
                   />
                 )}
                 <p>{article.description}</p>

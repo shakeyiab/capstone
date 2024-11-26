@@ -6,12 +6,13 @@ function Home() {
     const styles = {
         container: {
         
-          padding: '20px',
-          textAlign: 'center',
+          padding: '2px',
+          textAlign: '',
+          display:'',
         },
         heading: {
           color: 'darkblue',
-          fontSize: '24px',
+          fontSize: '20px',
         }
        
       };
@@ -61,7 +62,7 @@ function Home() {
       />
      
     </div>
-    <div> <p>Quickly Subscribe To Recieve News For As Low As $3.99 A Month! </p></div>
+    <div> <p>Quickly Subscribe To Recieve News For As Low As $.99 A Month! </p></div>
 
     <HomeNews />  </div>
     

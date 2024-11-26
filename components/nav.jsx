@@ -7,7 +7,7 @@ export default function Nav() {
       {' | '}
       <Link to={'/worldnews'}>World news</Link>
       {' | '}
-      <Link to={'/notfound'}>World weather</Link>
+      <Link to={'/Worldweather'}>World weather</Link>
       {' | '}
       <Link to={'/subscribe'}>Subscribe</Link>
       {' | '}

@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import WeatherComponent from './weathercom';
 
 
-function Worldnews()  {
+function Worldweather(){
   return (
     <div>
-      <h1>notfound</h1>
-      <p>notfound</p>
+      <WeatherComponent />
+      
     </div>
   );
 }
 
-export default Worldnews;
+
+export default Worldweather;
 
