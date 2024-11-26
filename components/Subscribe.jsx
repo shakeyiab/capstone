@@ -76,8 +76,10 @@ function Subscribe()  {
               {card.id === 2 && (
             <p style={{  }}>
               <p2><ul><li>
-              hello</li>
-              <li></li></ul>niii<br></br></p2>
+              Exclusive Daily Discover newsletter with the stories that matter.</li>
+              <li>Exclusive offers from The Journal Collection</li>
+              <li>Investing tools and technical analysis.</li>
+              <li> Real-time markets data and their impact.</li></ul></p2>
               
             </p>
           )}
