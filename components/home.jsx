@@ -22,7 +22,7 @@ function Home() {
         alignItems: 'center', // Align images vertically
         gap: '20px', // Space between items
         padding: '20px',
-        backgroundColor: '#f9f9f9', // Optional background color
+      
       };
     
       // Inline styles for the individual images
@@ -35,9 +35,13 @@ function Home() {
         boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Optional: Shadow effect
       }
   return (
+   
     <div style={styles.container}>
+       
     <h1 style={styles.heading}>Be The First To Recieve News!</h1>
     <p1>Sound journalism, grounded in facts never opinons</p1>
+    <p2> <br>
+    </br>New Articles Populate Seconds After Being Published</p2>
     <div style={containerStyle}>
       <img
         src="https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2017/11/best-news-apps-hero.jpg"

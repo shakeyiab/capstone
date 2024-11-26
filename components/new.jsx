@@ -33,7 +33,7 @@ const NewsComponent = () => {
     if (error) return <p>Error: {error}</p>;
     return (
         <div>
-          <h1>Top News Headlines</h1>
+          <h1>World News Headlines</h1>
           <ul>
             {articles.map((article, index) => (
               <li key={index} style={{ marginBottom: "20px" }}>

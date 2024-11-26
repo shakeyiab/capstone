@@ -23,7 +23,7 @@ function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    // Send a GET request to the backend API
+    // Send a GET request to the backend API to connect backend to front end
     axios.get('http://localhost:3000/api/message')
       .then(response => {
         setMessage(response.data.message); // Set the message received from the backend
