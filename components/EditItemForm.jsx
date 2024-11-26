@@ -45,7 +45,7 @@ const EditItemForm = ({ itemId, onItemUpdated, closeForm }) => {
 
   return (
     <div>
-      <h3>Edit Item</h3>
+      <h3>Edit Comment</h3>
       <form onSubmit={handleUpdate}>
         <input
           type="text"
@@ -55,11 +55,11 @@ const EditItemForm = ({ itemId, onItemUpdated, closeForm }) => {
         />
         <input
           type="text"
-          placeholder=" Description"
+          placeholder=" Comment"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
-        <button type="submit">Update Item</button>
+        <button type="submit">Update Comment</button>
       </form>
       {message && <p>{message}</p>}
     </div>
