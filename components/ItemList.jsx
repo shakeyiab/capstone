@@ -25,9 +25,20 @@ const ItemList = ({ onEdit, onDelete }) => {
 
   if (loading) return <p>Loading items...</p>;
 
+  const handleDelete = async (itemId) => {
+    try {
+      // Send DELETE request to backend
+      const response = await axios.delete(`http://localhost:3000/items/${itemId}`);
+      console.log(response.data);  // Log the response to ensure it’s correct
+      setItems(items.filter(item => item.id !== itemId)); // Remove item from local state
+    } catch (error) {
+      console.error('Error deleting item:', error);
+    }
+  };
+
   return (
     <div>
-      <h3>All Comments</h3>
+      <h3>All Items</h3>
       {items.length === 0 ? (
         <p>No items available.</p>
       ) : (
@@ -35,8 +46,8 @@ const ItemList = ({ onEdit, onDelete }) => {
           {items.map((item) => (
             <li key={item.id}>
               <strong>{item.name}</strong>: {item.description}
+              <button onClick={() => handleDelete(item.id)}>Delete</button>
               <button onClick={() => onEdit(item)}>Edit</button>
-              <button onClick={() => onDelete(item.id)}>Delete</button>
             </li>
           ))}
         </ul>

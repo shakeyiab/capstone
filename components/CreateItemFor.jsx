@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-// form for creating comments 
+// form for creating comments
 const CreateItemForm = ({ refreshItems }) => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');

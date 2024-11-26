@@ -1,0 +1,33 @@
+#Capstone Completion
+#Capstone Objective
+#Create a full-stack web application using MongoDB, Express, React, and Node (MERN).
+
+#for my full stack web application i decided to create a news website.
+#my website consist of 4 webpages, a homepage, a world news page, a world weather page and a subcription #page,
+#the first webpage the client will interact with once reaching the web application ive created is the #homepage,
+#the homepage consist of a nav bar which list and provide access to the remaining webpages 
+#the homepage provides advertisement for th client to buy a subscription by stating the articles are facts
+#never bias or opinion, and articles populate soon as the author publishes them, 
+#following the advertisment are photos to give the client a brief visualization of what my news webpage #has to offer, 
+#the first photo is a showing there is a mobile option,
+#the second photo shows a meterologist, indicating my website provides weather
+#the last photo is a bunch of magazines, to list that this website provides printed magzines
+#after the three cards are information that was fetched from the news api provided from the previous sba,
+#the information populated from the api, numerous news articles are listed down the website and they update daily.
+#the second webpage is the world news webpage, on this webpage a list of news articles throughout the #country are populated down the webpage. these articles are able to be read as well at the bottom of the #webpage are the CRUD capabilites, the crud #capabilites populate back to mongoose database, the client #would be able to create a comment based on #the articles using their username, the client is able to #read previous and current comments, the client #will also be able to update comments and delete
+#the third webpage is the world weather webpage, this webpage allows the client to choose a state from #the drop down buttom provided, the weather is listed from san francisco, Geogria, norfolk and texas,
+#the information provided for each state is the temperature in celicus, the current weather,the humidty
+#and the wind speed!
+#the last webpage is the subscription page, this page has 2 subscription options to choose from a basic 
+#plan and a plus plan, the price of each plan is listed , each plan has different pros, they are listed as well!
+
+
+
+
+
+Resources,
+React Tutorial https://www.w3schools.com/react/react_forms.asphttps://www.w3schools.com/react/react_forms.asp
+Connect to a MongoDB Database Using Node.js https://www.mongodb.com/developer/languages/javascript/node-connect-mongodb/?msockid=1de058496205662417f14b1d6605603f
+how to write comments in react https://www.geeksforgeeks.org/how-to-write-comments-in-reactjs/
+Subscription ideas https://newsrenewaldeals.com/products/wall-street-journal-1-year-subscription-digital?variant=42004748337302
+
