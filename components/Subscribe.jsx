@@ -52,21 +52,28 @@ function Subscribe()  {
     };
   
     const cards = [
-      { id: 1, title: 'Card 1', description: 'This is card 1', image: 'https://via.placeholder.com/300x200' },
-      { id: 2, title: 'Card 2', description: 'This is card 2', image: 'https://via.placeholder.com/300x200' },
+      { id: 1, title: 'Basic Plan', description: 'This is card 1', image: 'https://th.bing.com/th/id/OIP.AEP7ogG9e4QX5P74fKNHLQAAAA?rs=1&pid=ImgDetMain' },
+      { id: 2, title: 'Plan Plus', description: 'This is card 2', image: 'https://cdn.pixabay.com/photo/2014/04/02/10/55/plus-304947_1280.png' },
      
     ];
   
     return (
+      <div ><h1>Choose Your Subscription</h1>
       <div style={containerStyle}>
+       
         {cards.map((card) => (
           <div key={card.id} style={cardStyle}>
             <img src={card.image} alt={card.title} style={imageStyle} />
             <h2 style={titleStyle}>{card.title}</h2>
             <p style={descriptionStyle}>{card.description}</p>
+            
+            <p2><ul><li>
+              hello</li>
+              <li></li></ul>niii<br></br></p2>
             <button style={buttonStyle}>Read More</button>
           </div>
         ))}
+      </div>
       </div>
     );
   };
