@@ -34,7 +34,7 @@ const CreateItemForm = ({ refreshItems }) => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Name"
+          placeholder="Item Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />

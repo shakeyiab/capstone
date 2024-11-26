@@ -6,7 +6,7 @@ import cors from 'cors';
 import userRoutes from './routes/userRoutes.mjs';
 import dotenv from 'dotenv';
 import bodyParser from "body-parser";
-import userSchema from './schema/newSchema.mjs'
+
 
 
 //connect to mongodb

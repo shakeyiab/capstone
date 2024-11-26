@@ -54,7 +54,7 @@ function Subscribe()  {
     const cards = [
       { id: 1, title: 'Card 1', description: 'This is card 1', image: 'https://via.placeholder.com/300x200' },
       { id: 2, title: 'Card 2', description: 'This is card 2', image: 'https://via.placeholder.com/300x200' },
-      { id: 3, title: 'Card 3', description: 'This is card 3', image: 'https://via.placeholder.com/300x200' },
+     
     ];
   
     return (
